@@ -16,6 +16,7 @@ names_dict = od({
 "priyanka bepari": 137,
 "dwipanjana das": 140,
 "memo karpa": 178,
+"anwesha sardar": 289,
 "goutam biswas": 306,
 "jayanta sarkar":308,
 "akash saha": 340,
