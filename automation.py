@@ -10,7 +10,7 @@ driver = webdriver.Chrome('/home/hardik/Desktop/attendance/chromedriver',options
 
 
 #names ordered dictionary
-
+# CMSA 2018 batch
 names_dict = od({
 "hardik ghoshal": 90,
 "priyanka bepari": 137,
@@ -59,9 +59,9 @@ names_dict = od({
 
 
 ###########################
-#
+# For those people with differnt names linked to their google account
 # ADD your real names here
-#
+# Add more elif clause if required
 ###########################
 def alias(name):
     if name=='SayonR':
@@ -72,9 +72,9 @@ def alias(name):
         return name
 
 
-buffer_time = 75
+buffer_time = 75    #should be changed 
 for i in range(0,buffer_time):
-    system('clear')
+    system('clear') #'clear' should be changed to 'cls' for windows environment
     print('Time remaining = '+ str(buffer_time-i) + ' seconds', )
     time.sleep(1)
 
