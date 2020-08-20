@@ -19,6 +19,7 @@ names_dict = od({
 "anwesha sardar": 289,
 "goutam biswas": 306,
 "jayanta sarkar":308,
+"arian yeasin": 320,
 "akash saha": 340,
 "subhojit majumdar": 369,
 "rupam das": 542,
