@@ -21,7 +21,7 @@ names_dict = od({
 "jayanta sarkar":308,
 "arian yeasin": 320,
 "akash saha": 340,
-"subhojit majumdar": 369,
+"subhajit majumdar": 369,
 "rupam das": 542,
 "sourjaya das":556,
 "atanu chakraborty": 559,
@@ -45,12 +45,12 @@ names_dict = od({
 "parama mukherjee": 1151,
 "hritick jaiswal": 1153,
 "bishakha das": 1155,
-"Subhrojeet das": 1159,
+"subhrojeet das": 1159,
 "arifa saba": 1167,
 "ayush chakraborty": 1277,
 "maisha khatoon": 1178,
 "asmita mukherjee": 1182,
-"suprava das": 1287,
+"suprovo das": 1287,
 "shruti shovan das": 1291,
 "sneha das": 1292,
 "chandrabrata biswas": 1306,
@@ -98,6 +98,6 @@ for name in names_dict:
     if name in names_set:
         f.write(name + " :\t\t\t" + str(names_dict[name]) + "\t\tPresent\n")
     else:
-        f.write(name + " :  " + str(names_dict[name]) + "\tAbscent\n")
+        f.write(name + " :  " + str(names_dict[name]) + "\tAbsent\n")
 f.close()
 driver.close()
