@@ -66,7 +66,7 @@ names_dict = od({
 # Add more elif clause if required
 ###########################
 def alias(name):
-    if name=='SayonR':
+    if name=='sayonr':
         return 'sayon roy'
     elif name == 'sarah':
         return 'tanamrita saren'
