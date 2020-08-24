@@ -81,7 +81,8 @@ for i in range(0,buffer_time):
     time.sleep(1)
 
 names_set = {"hardik ghoshal"}
-length = len(names_dict)+1
+#length = len(names_dict)+1
+length = 1000
 try:
     for i in range(1,length):
         name = driver.find_element_by_xpath('//*[@id="ow3"]/div[1]/div/div[4]/div[3]/div[3]/div/div[2]/div[2]/div[2]/span[2]/div/div[1]/div[' + str(i) + ']/div[1]/div[1]').text.lower()
@@ -94,10 +95,15 @@ print(names_set)
 f = open("attendance.txt","w")
 x = datetime.datetime.now().date()
 f.write("\n"+ str(x) + "\n\n" )
+nameIndentChars = 8
+presentIndentChars = 24
 for name in names_dict:
     if name in names_set:
-        f.write(name + " :\t\t\t" + str(names_dict[name]) + "\t\tPresent\n")
+        roll = str(names_dict[name])
+        namechar = len(name)
+        rollchar = len(roll)
+        f.write(roll + (nameIndentChars-rollchar)*" " + name + (presentIndentChars-namechar)*" " + "Present\n")
     else:
-        f.write(name + " :  " + str(names_dict[name]) + "\tAbsent\n")
+        f.write(roll + (nameIndentChars-rollchar)*" " + name + (presentIndentChars-namechar)*" " + "Absent\n")
 f.close()
 driver.close()
