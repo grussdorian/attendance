@@ -10,7 +10,7 @@ driver = webdriver.Chrome('/home/hardik/Desktop/attendance/chromedriver',options
 
 
 #names ordered dictionary
-# CMSA 2018 batch
+
 names_dict = od({
 "hardik ghoshal": 90,
 "priyanka bepari": 137,
@@ -39,6 +39,7 @@ names_dict = od({
 "tamaghna bose": 1135,
 "swaraj haldar": 1136,
 "disha ganguly": 1139,
+"subham de": 1140,
 "sayan sarkar": 1143,
 "santosh kumar yadav": 1144,
 "arnab dey": 1148,
@@ -56,27 +57,28 @@ names_dict = od({
 "chandrabrata biswas": 1306,
 "anweshan roy chowdhury": 1307,
 "sayon roy": 1346,
-"tanmoy roy": 1370,
 })
 
 
 ###########################
-# For those people with differnt names linked to their google account
+#
 # ADD your real names here
-# Add more elif clause if required
+#
 ###########################
 def alias(name):
     if name=='sayonr':
         return 'sayon roy'
     elif name == 'sarah':
         return 'tanamrita saren'
+    elif name == 'santosh kumar':
+        return 'santosh kumar yadav'
     else:
         return name
 
 
-buffer_time = 75    #should be changed 
+buffer_time = 180
 for i in range(0,buffer_time):
-    system('clear') #'clear' should be changed to 'cls' for windows environment
+    system('clear')
     print('Time remaining = '+ str(buffer_time-i) + ' seconds', )
     time.sleep(1)
 
@@ -104,6 +106,9 @@ for name in names_dict:
         rollchar = len(roll)
         f.write(roll + (nameIndentChars-rollchar)*" " + name + (presentIndentChars-namechar)*" " + "Present\n")
     else:
+        roll = str(names_dict[name])
+        namechar = len(name)
+        rollchar = len(roll)
         f.write(roll + (nameIndentChars-rollchar)*" " + name + (presentIndentChars-namechar)*" " + "Absent\n")
 f.close()
 driver.close()
