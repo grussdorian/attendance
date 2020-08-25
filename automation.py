@@ -48,7 +48,7 @@ names_dict = od({
 "bishakha das": 1155,
 "subhrojeet das": 1159,
 "arifa saba": 1167,
-"ayush chakraborty": 1277,
+"aayush chakraborty": 1277,
 "maisha khatoon": 1178,
 "asmita mukherjee": 1182,
 "suprovo das": 1287,
